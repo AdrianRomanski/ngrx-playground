@@ -1,15 +1,23 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { appRoutes } from './app.routes';
+import { provideHttpClient } from '@angular/common/http';
+
 import { provideStore } from '@ngrx/store';
-import { counterReducer } from '@documentation/state';
+
+import { appRoutes } from './app.routes';
+
+import { booksReducer, counterReducer } from '@documentation/state';
+import { collectionReducer } from '@documentation/state';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideStore({
-      count: counterReducer
+      count: counterReducer,
+      books: booksReducer,
+      collection: collectionReducer
     }),
+    provideHttpClient(),
     provideRouter(appRoutes),
   ],
 };

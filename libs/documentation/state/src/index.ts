@@ -1,2 +1,2 @@
-export * from './lib/getting-started/counter.reducer';
-export * from './lib/getting-started/my-counter/my-counter.component';
+export * from './lib/getting-started/index';
+export * from './lib/walkthrough/index';

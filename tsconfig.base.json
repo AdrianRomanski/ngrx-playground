@@ -7,6 +7,8 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "useDefineForClassFields": false,
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
@@ -15,7 +17,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@documentation/state": ["libs/documentation/src/index.ts"]
+      "@documentation/state": ["libs/documentation/state/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
