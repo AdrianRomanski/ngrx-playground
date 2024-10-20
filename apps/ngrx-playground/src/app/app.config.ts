@@ -2,7 +2,7 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 
-import { provideStore } from '@ngrx/store';
+import { provideState, provideStore } from '@ngrx/store';
 
 import { appRoutes } from './app.routes';
 
